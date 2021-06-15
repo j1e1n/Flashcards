@@ -11,10 +11,10 @@ body {
 
 
 .grade-card {
-    border: black solid 1px;
-    box-shadow: 4px 8px 4px 0px;
+    border-width: 1px 8px 8px 1px;
+    border-color: black;
+    border-style: solid;
     text-align: center;
-    height: auto;
-    width: 25%;
+    padding: 1em 3em;
     margin: 1em;
 }
