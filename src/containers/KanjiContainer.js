@@ -7,6 +7,7 @@ const KanjiContainer = () =>  {
 
     const [allKanji, setAllKanji] = useState([]);
     const [currentKanji, setCurrentKanji] = useState(null);
+    const [selectedGrade, setSelectedGrade] = useState('');
 
 
     const getKanji = () => {
@@ -25,18 +26,22 @@ const KanjiContainer = () =>  {
 
 
 
-        useEffect(() => {
-            getKanji();
-        }, [])
+    useEffect(() => {
+        getKanji();
+    }, [])
 
-
+    
+        
+    const handleGradeSelect = (grade) => {
+        setSelectedGrade(grade);
+    }
 
 
 
     return(
         <>
-        <GradeCardGrid />
-        <KanjiList allKanji={allKanji} />
+        <GradeCardGrid handleGradeSelect={handleGradeSelect}/>
+        <KanjiList allKanji={allKanji} selectedGrade={selectedGrade}/>
         </>
     )
 }

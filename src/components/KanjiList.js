@@ -1,13 +1,17 @@
 import React from 'react';
 
 
-const KanjiList = ({allKanji}) =>  {
+const KanjiList = ({allKanji, selectedGrade}) =>  {
 
     if(!allKanji){
         return(
             <p>loading...</p>
         )
     }
+
+
+
+
 
     // filter full list into grades
         const fullList = allKanji.map((kanji, index) => {
@@ -41,56 +45,37 @@ const KanjiList = ({allKanji}) =>  {
         
     
 
-
-
-    // 1. select grade (1-5?)
-
-    // 2. save selection as variable
-
+    let listItems = [];
+    console.log("list items before swich", listItems)
+   
     // use switch statement to execute filtering of chosen grade
-    // switch(selectedGrade) {
-    //     case 'grade 1':
-    //         listItems = gradeOneList;
-    //         break;
-    //     case 'grade 2':
-    //         listItems = gradeTwoList;
-    //         break;
-    //     case 'grade 3':
-    //         listItems = gradeThreeList;
-    //         break;
-    //     case 'grade 4':
-    //         listItems = gradeFourList;
-    //         break;
-    //     case 'grade 5':
-    //         listItems = gradeFiveList;
-    //         break;
-    //     case 'full list':
-    //         listItems = fullList;
-    //         break;
-    //     default :
-    //         listItems = "Please select a list";
-    // }
+    switch(selectedGrade) {
+        case 'grade 1':
+            listItems = gradeOneList;
+            break;
+        case 'grade 2':
+            listItems = gradeTwoList;
+            break;
+        case 'grade 3':
+            listItems = gradeThreeList;
+            break;
+        case 'grade 4':
+            listItems = gradeFourList;
+            break;
+        case 'grade 5':
+            listItems = gradeFiveList;
+            break;
+        case 'full list':
+            listItems = fullList;
+            break;
+    }
 
-
-    // 4. display filtered list
-
-
-
-
-
-
-
-
-
-
-
-
-
+    console.log("list items after swich", listItems)
 
     return(
         <>
         <ol>
-            {gradeThreeList}
+            {listItems}
         </ol>
         </>
     )
