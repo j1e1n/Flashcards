@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import GradeCardGrid from '../components/GradeCardGrid';
 import KanjiList from '../components/KanjiList';
 
 
@@ -34,7 +35,7 @@ const KanjiContainer = () =>  {
 
     return(
         <>
-        <KanjiList allKanji={allKanji}/>
+        <GradeCardGrid />
         </>
     )
 }
