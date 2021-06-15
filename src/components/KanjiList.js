@@ -9,17 +9,33 @@ const KanjiList = ({allKanji}) =>  {
         )
     }
 
-    
+    // filter full list into grades
     const gradeOneList = allKanji.filter(kanji => kanji.references.grade === 1)
         .map((filteredKanji, index) => {
             return <li key={index}>{filteredKanji.kanji.character}</li>
         })
+
+        const gradeTwoList = allKanji.filter(kanji => kanji.references.grade === 2)
+        .map((filteredKanji, index) => {
+            return <li key={index}>{filteredKanji.kanji.character}</li>
+        })
+
+        const gradeThreeList = allKanji.filter(kanji => kanji.references.grade === 3)
+        .map((filteredKanji, index) => {
+            return <li key={index}>{filteredKanji.kanji.character}</li>
+        })
+
+        const gradeFourList = allKanji.filter(kanji => kanji.references.grade === 4)
+        .map((filteredKanji, index) => {
+            return <li key={index}>{filteredKanji.kanji.character}</li>
+        })
+
+        const gradeFiveList = allKanji.filter(kanji => kanji.references.grade === 5)
+        .map((filteredKanji, index) => {
+            return <li key={index}>{filteredKanji.kanji.character}</li>
+        })
         
-    console.log("gradeOne", gradeOneList)
     
-    // const kanjiListItems = allKanji.map((character, index) => {
-        //     return <li key={index}>{character.kanji.character}</li>
-        // })
 
 
 
@@ -66,7 +82,7 @@ const KanjiList = ({allKanji}) =>  {
     return(
         <>
         <ol>
-            {gradeOneList}
+            {gradeThreeList}
         </ol>
         </>
     )
