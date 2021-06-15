@@ -24,6 +24,10 @@ const GradeCardGrid = () => {
                 <h3>Grade</h3>
                 <h1>5</h1>
             </div>
+            <div className="grade-card">
+                <h1>Full</h1>
+                <h1>List</h1>
+            </div>
         </div>
   
         </>

@@ -36,6 +36,7 @@ const KanjiContainer = () =>  {
     return(
         <>
         <GradeCardGrid />
+        <KanjiList allKanji={allKanji} />
         </>
     )
 }

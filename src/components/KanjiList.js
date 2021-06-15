@@ -10,7 +10,11 @@ const KanjiList = ({allKanji}) =>  {
     }
 
     // filter full list into grades
-    const gradeOneList = allKanji.filter(kanji => kanji.references.grade === 1)
+        const fullList = allKanji.map((kanji, index) => {
+            return <li key={index}>{kanji.kanji.character}</li>
+        })
+
+        const gradeOneList = allKanji.filter(kanji => kanji.references.grade === 1)
         .map((filteredKanji, index) => {
             return <li key={index}>{filteredKanji.kanji.character}</li>
         })
@@ -60,7 +64,11 @@ const KanjiList = ({allKanji}) =>  {
     //     case 'grade 5':
     //         listItems = gradeFiveList;
     //         break;
-        
+    //     case 'full list':
+    //         listItems = fullList;
+    //         break;
+    //     default :
+    //         listItems = "Please select a list";
     // }
 
 
