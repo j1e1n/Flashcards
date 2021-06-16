@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const KanjiList = ({allKanji, selectedGrade}) =>  {
 
     if(!allKanji){
@@ -8,10 +7,6 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
             <p>loading...</p>
         )
     }
-
-
-
-
 
     // filter full list into grades
         const fullList = allKanji.map((kanji, index) => {
@@ -44,10 +39,9 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
         })
         
     
-
+    
     let listItems = [];
-    console.log("list items before swich", listItems)
-   
+
     // use switch statement to execute filtering of chosen grade
     switch(selectedGrade) {
         case 'grade 1':
@@ -68,15 +62,19 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
         case 'full list':
             listItems = fullList;
             break;
+        default:
+            listItems = ["Please select a grade."]
+            break;
     }
 
-    console.log("list items after swich", listItems)
 
     return(
         <>
+        <div>
         <ol>
             {listItems}
         </ol>
+        </div>
         </>
     )
 }
