@@ -1,31 +1,56 @@
 body {
-    box-sizing: border-box;
     margin: 1em;
 }
 
 .grade-card-container {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-
 }
 
 
 .grade-card {
-    border-width: 1px 8px 8px 1px;
+    border-width: 2px 8px 8px 2px;
     border-color: black;
     border-style: solid;
     text-align: center;
     padding: 1em 3em;
     margin: 1em 0.5em;
+    cursor: pointer;
+}
+
+.grade-card:hover {
+    background-color: deepskyblue ;
 }
 
 
 .kanji-list-container {
-    display: flex;
-    flex-shrink: initial;
-    border: black solid 2px;
-    margin: 1.5em;
+    border: black solid 4px;
+    margin: 0.5em;
+}
 
+.kanji-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    font-size: 50px;
+    padding: 0;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.kanji-list li {
+    border: black solid 1px;
+    padding: 0.25em;
+    margin: 0.1em;
+    cursor: pointer;
+}
+
+.kanji-list li:hover {
+    background-color: yellow;
 }

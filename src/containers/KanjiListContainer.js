@@ -4,7 +4,7 @@ import KanjiList from '../components/KanjiList';
 const KanjiListContainer = ({allKanji, selectedGrade}) => {
     return(
         <>
-        <div className="kanji-list-container">
+        <div>
             <KanjiList allKanji={allKanji} selectedGrade={selectedGrade}/>
         </div>
         

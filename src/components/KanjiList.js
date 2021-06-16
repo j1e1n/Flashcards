@@ -70,9 +70,11 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
 
     return(
         <>
-        <ol>
-            {listItems}
-        </ol>
+        <div className="kanji-list-container">
+            <ul className="kanji-list">
+                {listItems}
+            </ul>
+        </div>
         </>
     )
 }
