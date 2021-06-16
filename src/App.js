@@ -1,10 +1,10 @@
 import './App.css';
-import KanjiContainer from './containers/KanjiContainer';
+import MainContainer from './containers/MainContainer';
 
 function App() {
   return (
     <div className="App">
-     <KanjiContainer />
+     <MainContainer />
     </div>
   );
 }

@@ -1,10 +1,12 @@
 body {
+    box-sizing: border-box;
     margin: 1em;
 }
 
 .grade-card-container {
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
 }
@@ -16,5 +18,14 @@ body {
     border-style: solid;
     text-align: center;
     padding: 1em 3em;
-    margin: 1em;
+    margin: 1em 0.5em;
+}
+
+
+.kanji-list-container {
+    display: flex;
+    flex-shrink: initial;
+    border: black solid 2px;
+    margin: 1.5em;
+
 }

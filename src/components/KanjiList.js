@@ -42,7 +42,7 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
     
     let listItems = [];
 
-    // use switch statement to execute filtering of chosen grade
+    // use switch statement to select which filtered list to render
     switch(selectedGrade) {
         case 'grade 1':
             listItems = gradeOneList;
@@ -70,11 +70,9 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
 
     return(
         <>
-        <div>
         <ol>
             {listItems}
         </ol>
-        </div>
         </>
     )
 }
