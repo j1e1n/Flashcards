@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import GradeCardGrid from '../components/GradeCardGrid';
-import KanjiList from '../components/KanjiList';
 import KanjiListContainer from './KanjiListContainer';
+import KanjiDetail from '../components/KanjiDetail';
 
 
 const MainContainer = () =>  {
 
     const [allKanji, setAllKanji] = useState([]);
-    const [currentKanji, setCurrentKanji] = useState(null);
+    const [selectedKanji, setSelectedKanji] = useState(null);
     const [selectedGrade, setSelectedGrade] = useState('');
 
 
@@ -39,6 +39,7 @@ const MainContainer = () =>  {
         <>
         <GradeCardGrid handleGradeSelect={handleGradeSelect}/>
         <KanjiListContainer allKanji={allKanji} selectedGrade={selectedGrade}/>
+        <KanjiDetail selectedKanji={selectedKanji}/>
         </>
     )
 }
