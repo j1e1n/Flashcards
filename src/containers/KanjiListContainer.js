@@ -1,11 +1,11 @@
 import React from 'react';
 import KanjiList from '../components/KanjiList';
 
-const KanjiListContainer = ({allKanji, selectedGrade}) => {
+const KanjiListContainer = ({allKanji, selectedGrade, handleKanjiClick}) => {
     return(
         <>
         <div>
-            <KanjiList allKanji={allKanji} selectedGrade={selectedGrade}/>
+            <KanjiList allKanji={allKanji} selectedGrade={selectedGrade} handleKanjiClick={handleKanjiClick}/>
         </div>
         
         </>

@@ -1,11 +1,16 @@
 import React from 'react';
 
 const KanjiDetail = ({selectedKanji}) => {
+
+    if(!selectedKanji){
+        console.log(selectedKanji)
+        return null;
+    }
     
     return (
         <>
         <div>
-            <p>{selectedKanji.meaning}</p>
+            <p>{selectedKanji.kanji.character}</p>
         </div>
 
         </>

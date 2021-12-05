@@ -1,6 +1,6 @@
 import React from 'react';
 
-const KanjiList = ({allKanji, selectedGrade}) =>  {
+const KanjiList = ({allKanji, selectedGrade, handleKanjiClick}) =>  {
 
     if(!allKanji){
         return(
@@ -8,34 +8,41 @@ const KanjiList = ({allKanji, selectedGrade}) =>  {
         )
     }
 
+
+    const onKanjiClick = (kanji) => {
+        // console.log("selected kanji", kanji)
+        handleKanjiClick(kanji)
+    }
+
+
     // filter full list into grades
         const fullList = allKanji.map((kanji, index) => {
-            return <li key={index}>{kanji.kanji.character}</li>
+            return <li key={index} onClick={() => {onKanjiClick(kanji)}}>{kanji.kanji.character}</li>
         })
 
         const gradeOneList = allKanji.filter(kanji => kanji.references.grade === 1)
         .map((filteredKanji, index) => {
-            return <li key={index}>{filteredKanji.kanji.character}</li>
+            return <li key={index} >{filteredKanji.kanji.character}</li>
         })
 
         const gradeTwoList = allKanji.filter(kanji => kanji.references.grade === 2)
         .map((filteredKanji, index) => {
-            return <li key={index}>{filteredKanji.kanji.character}</li>
+            return <li key={index} >{filteredKanji.kanji.character}</li>
         })
 
         const gradeThreeList = allKanji.filter(kanji => kanji.references.grade === 3)
         .map((filteredKanji, index) => {
-            return <li key={index}>{filteredKanji.kanji.character}</li>
+            return <li key={index} >{filteredKanji.kanji.character}</li>
         })
 
         const gradeFourList = allKanji.filter(kanji => kanji.references.grade === 4)
         .map((filteredKanji, index) => {
-            return <li key={index}>{filteredKanji.kanji.character}</li>
+            return <li key={index} >{filteredKanji.kanji.character}</li>
         })
 
         const gradeFiveList = allKanji.filter(kanji => kanji.references.grade === 5)
         .map((filteredKanji, index) => {
-            return <li key={index}>{filteredKanji.kanji.character}</li>
+            return <li key={index} >{filteredKanji.kanji.character}</li>
         })
         
     

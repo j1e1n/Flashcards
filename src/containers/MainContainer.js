@@ -7,7 +7,7 @@ import KanjiDetail from '../components/KanjiDetail';
 const MainContainer = () =>  {
 
     const [allKanji, setAllKanji] = useState([]);
-    const [selectedKanji, setSelectedKanji] = useState(null);
+    const [selectedKanji, setSelectedKanji] = useState([]);
     const [selectedGrade, setSelectedGrade] = useState('');
 
 
@@ -35,10 +35,15 @@ const MainContainer = () =>  {
         setSelectedGrade(grade);
     }
 
+    const handleKanjiClick = (kanji) => {
+        setSelectedKanji(kanji);
+        console.log(kanji.kanji.character)
+    }
+
     return(
         <>
         <GradeCardGrid handleGradeSelect={handleGradeSelect}/>
-        <KanjiListContainer allKanji={allKanji} selectedGrade={selectedGrade}/>
+        <KanjiListContainer allKanji={allKanji} selectedGrade={selectedGrade} handleKanjiClick={handleKanjiClick}/>
         <KanjiDetail selectedKanji={selectedKanji}/>
         </>
     )
